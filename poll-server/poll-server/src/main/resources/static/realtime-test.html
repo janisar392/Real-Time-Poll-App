@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+
+<h2>WebSocket Test — Check Console</h2>
+
+<script>
+
+    const pollId = "699076bc90f5fe28ec3c0595";
+
+    const socket = new SockJS("http://localhost:8080/ws");
+    const stompClient = Stomp.over(socket);
+
+    stompClient.connect({}, function () {
+
+        console.log("✅ Connected to WebSocket");
+
+        stompClient.subscribe("/topic/poll/" + pollId, function (message) {
+
+            console.log("📊 Real-time update received:");
+            console.log(JSON.parse(message.body));
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
