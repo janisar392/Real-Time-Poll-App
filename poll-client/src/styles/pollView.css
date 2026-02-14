@@ -1,0 +1,109 @@
+.option-card {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.option-card button {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  background: #f8fafc;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.option-card button:not(:disabled):hover {
+  background: #edf2f7;
+  transform: none;
+  box-shadow: none;
+}
+
+.option-card button:disabled {
+  background: #f8fafc;
+  cursor: default;
+  opacity: 1;
+}
+
+.progress-bar {
+  background: #edf2f7;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 8px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  background: #4a6cf7;
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.copy-btn {
+  background: #ff9800;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 20px;
+  width: auto;
+  min-width: 140px;
+}
+
+.copy-btn:hover {
+  background: #e68900;
+  transform: none;
+  box-shadow: none;
+}
+
+.poll-header {
+  margin-bottom: 25px;
+}
+
+.poll-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.total-votes {
+  color: #718096;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.option-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.vote-count {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.percentage {
+  color: #718096;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
