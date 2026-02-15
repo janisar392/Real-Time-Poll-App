@@ -19,17 +19,34 @@ function AppWrapper() {
   };
 
   return (
-    <div style={{ width: "100%", padding: "20px" }}>
-      {/* Centered title like second image */}
+    <div style={{ width: "100%", padding: "20px", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+      {/* Header */}
       <div className="app-header">
         <h1 className="app-title">Real-Time Poll App</h1>
         <div className="app-subtitle">CREATE · VOTE · SEE RESULTS INSTANTLY</div>
       </div>
 
-      <Routes>
-        <Route path="/" element={<CreatePoll onPollCreated={handlePollCreated} />} />
-        <Route path="/poll/:id" element={<PollView />} />
-      </Routes>
+      {/* Main content */}
+      <div style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<CreatePoll onPollCreated={handlePollCreated} />} />
+          <Route path="/poll/:id" element={<PollView />} />
+        </Routes>
+      </div>
+
+  <footer style={{
+  marginTop: "60px",
+  padding: "20px 0",
+  textAlign: "center",
+  color: "#ffffffcc",
+  fontSize: "14px",
+  borderTop: "1px solid rgba(255,255,255,0.2)"
+}}>
+   <strong>Designed & developed By : Janisar Akhtar — Software Engineer</strong> 
+</footer>
+
+
     </div>
   );
 }
