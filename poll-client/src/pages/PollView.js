@@ -13,15 +13,21 @@ function PollView() {
 
   useEffect(() => {
 
-    loadPoll();
+  const load = async () => {
+    await loadPoll();
+  };
 
-    const client = connectSocket(pollId, (updatedPoll) => {
-      setPoll(updatedPoll);
-    });
+  load();
 
-    return () => client.deactivate();
+  const client = connectSocket(pollId, (updatedPoll) => {
+    setPoll(updatedPoll);
+  });
 
-  }, [pollId]);
+  return () => client.deactivate();
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [pollId]);
+
 
   const loadPoll = async () => {
     const res = await getPoll(pollId);
