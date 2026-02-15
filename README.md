@@ -4,8 +4,8 @@ A full-stack real-time polling application that allows users to create polls, sh
 
 🚀 Live Demo
 
-👉 Frontend: [Add Netlify URL here]
-👉 Backend API: [Add Render URL here]
+👉 Frontend: https://real-time-poll.netlify.app/
+👉 Backend API: https://real-time-poll-app-9z96.onrender.com
 
 🧠 Problem Statement
 
@@ -222,9 +222,6 @@ Redis caching
 
 Horizontal scaling
 
-📸 Screenshots
-
-(Add screenshots here before submission)
 
 🧪 Testing
 
