@@ -3,7 +3,8 @@ import { Client } from "@stomp/stompjs";
 
 const connectSocket = (pollId, onMessage) => {
 
-  const socket = new SockJS("http://localhost:8080/ws");
+  // const socket = new SockJS("http://localhost:8080/ws");
+  const socket = new SockJS("https://real-time-poll-app-9z96.onrender.com/ws");
 
   const stompClient = new Client({
     webSocketFactory: () => socket,

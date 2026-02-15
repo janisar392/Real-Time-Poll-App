@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/polls";
+// const BASE_URL = "http://localhost:8080/api/polls";
+const BASE_URL = "https://real-time-poll-app-9z96.onrender.com/api/polls";
 
 export const createPoll = (data) => axios.post(BASE_URL, data);
 
